@@ -84,8 +84,8 @@ gulp.task('ejs', function() {
 	console.log('********** Copying EJS Templates');
 
 	return gulp
-		.src('./public/views/*.ejs')
-		.pipe(gulp.dest('./dist/views'))
+		.src('./public/*.ejs')
+		.pipe(gulp.dest('./dist'))
 });
 
 
@@ -105,7 +105,7 @@ gulp.task('watch', ['ejs', 'js', 'styles', 'bootstrap-css', 'fonts', 'css-plugin
 	gulp.watch('./public/css/**/*.*', ['styles', 'fonts', 'css-plugins']);
 	gulp.watch('./public/images/**/*.*', ['images']);
 	gulp.watch('./public/js/**/*.*', ['js']);
-	gulp.watch('./public/views/*.ejs', ['ejs']);
+	gulp.watch('./public/*.ejs', ['ejs']);
 });
 
 gulp.task('serve-dev', function() {
