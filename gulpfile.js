@@ -9,7 +9,7 @@ var autoprefixer = require('autoprefixer');
 var plumber = require('gulp-plumber');
 var minifyCSS = require('gulp-minify-css');
 var nodemon = require('gulp-nodemon');
-var port = process.env.PORT || 8000; 
+var port = process.env.PORT || 7000; 
 
 var path = {
 	MINIFIED_OUT: 'build.min.js',
